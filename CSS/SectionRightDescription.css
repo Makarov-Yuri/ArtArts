@@ -1,0 +1,190 @@
+
+
+.RightDescription{
+	
+	width:100%;
+	min-height:400px;
+	display:flex;
+	background:#dfedec;
+	padding-bottom:50px;
+	
+}
+
+
+.RightDescription>.IMG{
+	
+	width:50%;
+	min-height:400px;
+	display:flex;
+	justify-content:center;
+	align-items:start;
+	
+}
+
+
+.RightDescription>.IMG>img{
+	
+	margin-top:140px;
+	max-width:40vw;
+	max-height:450px;
+	height:auto;
+	width:auto;
+	user-select:none;
+	
+}
+
+
+.RightDescription>.Content{
+	
+	width:50%;
+	min-height:400px;
+	
+}
+
+
+.RightDescription>.Content>.SectionName{
+	
+	margin-top:50px;
+	width:100%;
+	height:70px;
+	background:white;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:40px;
+	font-size: calc(30px + 10* ((100vw - 320px) / (1366 - 320)));
+	color:#488776;
+	text-transform:uppercase;/*Сделать тект с заглавных букв*/
+	
+}
+
+
+.RightDescription>.Content>div>img{
+	
+	display:none;
+	user-select:none;
+	
+}
+
+
+.RightDescription>.Content>.Description{
+	
+	margin-top:50px;
+	text-align:start;
+	font-size:20px;
+	font-size: calc(15px + 10* ((100vw - 320px) / (1366 - 320)));
+	padding-left:15px;
+	padding-right:15px;
+	line-height:calc(20px + 10* ((100vw - 320px) / (1366 - 320)));
+	
+		
+}
+
+
+.RightDescription>.Content>.List{
+	
+	margin-top:30px;
+	
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	
+}
+
+
+.RightDescription>.Content>.List>li{
+	
+	min-width:220px;
+	width:25vw;
+	
+	height:40px;
+	background:white;
+	border-radius:20px;
+	
+	margin-top:10px;
+	
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	
+	font-size:20px;
+	font-size: calc(12px + 8* ((100vw - 320px) / (1366 - 320)));
+	text-transform:uppercase;/*Сделать тект с заглавных букв*/
+	
+}
+
+
+@media (max-width: 730px){
+	
+	.RightDescription>.IMG>img{
+	
+	height:auto;
+	width:max(80%,200px);
+	
+	}
+	
+	
+	.RightDescription>.Content>.SectionName{
+		
+		font-size: calc(20px + 20* ((100vw - 320px) / (1366 - 320)));
+		
+	}	
+	
+		
+}
+
+
+@media (max-width: 460px){
+	
+	.RightDescription>.Content>.SectionName{
+		
+		font-size: calc(25px + 15* ((100vw - 320px) / (1366 - 320)));
+		
+	}
+	
+	
+	.RightDescription>.IMG{
+	
+		display:none;
+	
+	}
+	
+	
+	.RightDescription>.Content{
+	
+		width:100%;
+	
+	}
+	
+	
+	.RightDescription>.Content>div>img{
+		
+		display:block;
+		height:auto;
+		width:max(50%,150px);
+	
+	}
+	
+	
+	.RightDescription>.Content>div{
+	
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		width:100%;
+		height:auto;
+		margin-top:20px;
+	
+	}
+	
+	
+	.RightDescription>.Content>.Description{
+	
+		margin-top:20px;
+		
+	}
+	
+}
+
+

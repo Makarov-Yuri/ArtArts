@@ -1,0 +1,253 @@
+
+#PlanetarySystem{
+
+	height:auto;
+	width:100%;
+	position:relative;
+	
+}
+
+
+
+#NightSky{
+
+	height:auto;
+	width:100%;
+	
+
+}
+
+
+
+
+#Planet{
+	height:auto;
+	width:max(5%,100px);
+	position:absolute;
+	left:0px;
+
+}
+
+#Sun{
+	height:auto;
+	width:max(10%,100px);
+	
+	position:absolute;
+	margin:auto;
+	top:0; 
+	left:0; 
+	bottom:0; 
+	right:0;
+	
+
+}
+
+
+#Ring-1{
+	
+	height:auto;
+	width:30%;
+	position:absolute;
+	margin:auto;
+	top:0; 
+	left:0; 
+	bottom:0; 
+	right:0;
+	
+	
+}
+
+
+#Ring-2{
+	
+	height:auto;
+	width:50%;
+	position:absolute;
+	margin:auto;
+	top:0; 
+	left:0; 
+	bottom:0; 
+	right:0;
+	
+}
+
+
+
+#Ring-3{
+	
+	height:auto;
+	width:70%;
+	position:absolute;
+	margin:auto;
+	top:0; 
+	left:0; 
+	bottom:0; 
+	right:0;
+	
+}
+
+
+#Ring-4{
+	
+	height:auto;
+	width:90%;
+	position:absolute;
+	margin:auto;
+	top:0; 
+	left:0; 
+	bottom:0; 
+	right:0;
+	
+}
+
+
+
+
+
+
+
+
+
+#FirstBlock{
+	
+	height:auto;
+	width:100%;
+	
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	
+}
+
+
+#FirstBlock>h2{
+	
+	font-size:30px;
+	font-size: calc(15px + 15* ((100vw - 320px) / (1366 - 320)));
+	text-transform:uppercase;/*Сделать тект с заглавных букв*/
+	color:black;
+	text-align:center;
+	
+	margin-top:50px;
+	margin-top:calc(20px + 60* ((100vw - 320px) / (1366 - 320)));
+	
+	margin-bottom:50px;
+	margin-bottom:calc(20px + 60* ((100vw - 320px) / (1366 - 320)));
+	
+	
+}
+
+
+#FirstBlock>h2>span{
+	
+	color:#73a79d;
+	
+}
+
+
+
+#FirstBlock>p{
+	
+	height:auto;
+	width:80%;
+	
+	text-align:center;
+	
+	text-transform:uppercase;/*Сделать тект с заглавных букв*/
+	
+	line-height:calc(15px + 20* ((100vw - 320px) / (1366 - 320)));
+	font-size: calc(12px + 6* ((100vw - 320px) / (1366 - 320)));
+	
+	
+	margin-top:50px;
+	margin-top:calc(20px + 60* ((100vw - 320px) / (1366 - 320)));
+	
+	
+	margin-bottom:50px;
+	margin-bottom:calc(20px + 60* ((100vw - 320px) / (1366 - 320)));
+	
+	
+
+}
+
+#FirstBlock>p>span{
+	
+	color:#73a79d;
+	
+}
+
+
+
+
+
+
+
+
+#SecondBlock{
+	
+	height:auto;
+	width:100%;
+	
+}
+
+
+#SecondBlock>#BlockForIMG{
+	
+	margin-top:40px;
+	margin-top:calc(20px + 20* ((100vw - 320px) / (1366 - 320)));
+	
+	
+	
+	
+	
+	height:auto;
+	width:100%;
+	display:flex;
+	justify-content:space-around;
+	
+	user-select:none;
+		
+}
+
+
+#SecondBlock>#BlockForIMG>a{
+	
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);/*Убираем синее выделение*/
+	
+}
+
+
+
+#SecondBlock>#BlockForIMG>a>img{
+
+	width:45vw;
+	height:auto;
+	
+}
+
+
+@media (max-width: 360px){
+
+
+
+	#SecondBlock>#BlockForIMG{
+		
+		flex-direction:column;
+		align-items:center;
+		
+			
+	}
+	
+	#SecondBlock>#BlockForIMG>a>img{
+
+		width:70vw;
+		height:auto;
+		margin-bottom:20px;
+	
+	}
+	
+	
+
+}
+
+

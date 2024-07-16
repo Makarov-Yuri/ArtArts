@@ -1,0 +1,31 @@
+
+DirectoryIndex index.php
+
+RewriteEngine On
+#RewriteCond %{HTTPS} !on
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+#роботы яндекса и гугла во время индексации страницы могут добавить в ее адрес слэш
+#если пользователь заходит на страницу со слэшом, то мы убираем его
+#чтобы пользователь перешел на действительную страницу
+#Убираем слеш в конце:
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} ^(.+)/$
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+
+#Указываем кеширование картинок на 1 месяц .png
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/png "access plus 1 month"
+</IfModule>
+
+
+#Устанавливаем e-mail для администратора сервера
+#Этот код в .htaccess установит e-mail администратора по умолчанию. 
+#На него будут приходить уведомления, связанные с важными событиями на сервере.
+ServerSignature EMail
+SetEnv SERVER_ADMIN Ernandes20@yandex.ru
+
+
+

@@ -1,0 +1,315 @@
+
+
+@import url("../fonts/NeoSansPro/stylesheet.css");
+
+
+body{
+	
+	font-family:'Neo Sans Pro',Arial;	
+	
+}
+
+
+
+header{
+	
+	width:100%;
+	height:auto;
+	
+}
+
+
+nav{
+	
+	height:76px;
+	width:100%;
+	display:flex;
+	justify-content:space-around;
+	
+	font-size:20px;
+	text-transform:uppercase;/*Сделать тект с заглавных букв*/
+	
+	font-size:20px;/*Показываем размер шрифта при ширине экрана 1366 пикселей*/
+	font-size: calc(12px + 8 * ((100vw - 320px) / (1366 - 320)));
+	
+	
+	z-index:3;
+	top:0px;
+	position:sticky;
+	background:white;
+	
+	user-select:none;
+		
+}
+
+
+
+
+/*Изначально выключаем кнопочный меню бар*/
+nav>button{
+		
+	display:none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);/*Убираем синее выделение*/
+		
+}
+
+nav>#ShowedMenu{
+	
+	text-transform:none;
+	
+	position:fixed;
+	
+	background:white;
+	z-index:10;
+	
+	width:50vw;
+	height:100vh;
+	right:0px;
+	
+	transform:translateX(50vw);	
+}
+
+.ShowMenuAnimation{
+	
+	display:block;
+	transition-property:transform;
+	transition-duration:0.3s;
+	
+}
+
+
+nav>#ShowedMenu>a{
+	
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	
+	height:60px;
+	
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);/*Убираем синее выделение*/
+	
+}
+
+
+
+nav>a{
+
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:18%;
+	
+	width:max-content;
+	
+	cursor:pointer;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);/*Убираем синее выделение*/
+	
+}
+
+
+nav>a>img{
+
+	width:auto;
+	height:18px;
+	margin-left:8px;
+	user-select: none;
+
+}
+
+
+@media (max-width: 620px){
+	
+	nav{
+
+		height:46px;
+	
+	}
+		
+}
+
+
+@media (max-width: 430px){
+	
+	
+	nav>button{
+		
+		display:flex;/*При ширине экрана 430px включаем кнопочный меню бар*/
+		
+		align-items:center;
+		justify-content:center;
+		flex-direction:column;
+		
+		position:absolute;
+		right:10px;
+		
+		height:46px;
+		background:white;
+		
+		
+	}
+	
+	
+	/*Настраиваем меню бар*/
+	
+	nav>button>p{
+		
+		display:block;
+		
+		width:30px;
+		height:5px;
+		background:rgb(0,57,70);
+		opacity:0.9;
+		
+	}
+	
+
+	nav>button>p:nth-child(2){
+		
+		margin-top:5px;
+		
+	}
+	
+	
+	nav>button>p:nth-child(3){
+		
+		margin-top:5px;
+		
+	}
+	
+	
+	/*убарием все переходы из полоски меню*/
+	nav>a{
+
+		display:none;
+	
+	}
+	
+	
+	/*Настаиваем положение главной иконки, когда все остальные ссылки включены в меню бар*/
+	nav{
+		
+		justify-content:start;
+	
+	}
+	
+	
+	nav>a:nth-child(1){
+		
+		display:flex;
+		margin-left:10px;
+	
+	}	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+header>div{
+	
+	width:100%;
+	height:auto;/*Устанавливаем высоту в зависимости от наполнения*/
+/*Задаем относительно позиционирование, чтобы дочерние элементы с position:absolute ориентировались через top относительно высоты этого элемента*/
+	position:relative;
+	user-select: none;
+	
+}
+
+
+header>div>p,header>div>h2{
+	
+	position:absolute;
+	z-index:2;
+	width:100%;
+	text-align:center;
+	color:white;
+	
+	text-transform:uppercase;/*Сделать тект с заглавных букв*/	
+	text-shadow:black -4px 0px 4px;
+	
+}
+
+
+header>div>h2{
+	
+	top:30%;
+	font-size:80px;/*Показываем размер шрифта при ширине экрана 1366 пикселей*/
+	font-size: calc(30px + 53 * ((100vw - 320px) / (1366 - 320)));
+			
+}
+
+
+header>div>p{
+	
+	top:60%;
+	font-size:40px;/*Показываем размер шрифта при ширине экрана 1366 пикселей*/
+	font-size: calc(15px + 26 * ((100vw - 320px) / (1366 - 320)));
+	padding-left:15px;
+	padding-right:15px;
+	
+	
+}
+
+
+@media (max-width: 420px) {
+	
+	
+	
+	header>div>p:nth-child(1){
+		
+		top:25%;
+		
+	}
+	
+}
+
+@media (max-width: 300px) {
+	
+	header>div>p:nth-child(1){
+		
+		top:20%;
+		
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+header>div>div>img{
+	
+	width:100%;
+	/*Задаем высоту картинки в соовтетствии с шириной устройства - она будет главным наполнением родительского элемента определяющим его высоту*/
+	height:auto;
+	position:relative;
+	z-index:0;
+	pointer-events:none;
+}
+
+header>div>div:after{
+
+	content:"";
+	display:block;    
+	width:100%;
+	height:100%;    
+	position: absolute;
+	top:0px;      
+	left:0;
+	background:rgb(0,57,70);
+	opacity:0.6;
+	
+}
+
+

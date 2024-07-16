@@ -1,0 +1,193 @@
+
+footer{
+	
+	height:auto;
+	width:100%;
+	
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	
+}
+
+footer>h2{
+	
+	font-size:30px;
+	font-size: calc(15px + 15* ((100vw - 320px) / (1366 - 320)));
+	text-transform:uppercase;/*Сделать тект с заглавных букв*/
+	color:black;
+	text-align:center;
+	
+	
+	margin-top:40px;
+	margin-top:calc(20px + 20* ((100vw - 320px) / (1366 - 320)));
+	
+	margin-bottom:30px;
+	margin-bottom:calc(20px + 20* ((100vw - 320px) / (1366 - 320)));
+	
+}
+
+footer>h2>span{
+	
+	color:#73a79d;
+	
+	
+}
+
+
+footer>#BlockOfContactInformation{
+	
+	width:80%;
+	height:auto;
+	
+	display:flex;
+	justify-content:space-between;
+	
+	margin-bottom:30px;
+	margin-bottom:calc(20px + 20* ((100vw - 320px) / (1366 - 320)));
+		
+}
+
+
+footer>#BlockOfContactInformation>div>p{
+	font-size:16px;
+	font-size: calc(12px + 4* ((100vw - 320px) / (1366 - 320)));	
+	line-height:calc(18px + 4* ((100vw - 320px) / (1366 - 320)));
+}
+
+
+footer>#BlockOfContactInformation>div>p:nth-child(1){
+	
+	font-size: calc(12px + 10* ((100vw - 320px) / (1366 - 320)));	
+	text-transform:uppercase;/*Сделать тект с заглавных букв*/
+	margin-bottom:5px;
+	
+}
+
+
+footer>#Location{
+	
+	width:90%;
+	height:auto;
+	display:flex;
+	justify-content:space-around;
+	margin-bottom:100px;
+		
+}
+
+
+footer>#Location>#Map{
+	
+	width:60%;
+	height:400px;
+	user-select:none;
+	
+}
+
+footer>#Location>#Adress{
+	
+	width:30%;
+	height:auto;
+	display:flex;
+	flex-direction:column;
+	align-items:start;
+
+		
+}
+
+
+footer>#Location>#Adress>p{
+	
+	font-size:16px;
+	font-size: calc(12px + 4* ((100vw - 320px) / (1366 - 320)));	
+	line-height:calc(18px + 4* ((100vw - 320px) / (1366 - 320)));
+	text-align:start;
+	
+	
+
+	
+}
+
+
+footer>#Location>#Adress>p:nth-child(1){
+	
+	font-size: calc(12px + 10* ((100vw - 320px) / (1366 - 320)));	
+	text-transform:uppercase;/*Сделать тект с заглавных букв*/
+	margin-bottom:5px;
+}
+
+
+
+
+
+
+
+@media (max-width: 360px){
+	
+
+	footer>#BlockOfContactInformation{
+			
+			width:80%;
+			
+			align-items:center;
+			flex-direction:column;
+			
+	}
+		
+		
+	footer>#BlockOfContactInformation>div{
+		
+		width:50%;
+		margin-top:10px;
+		
+	}
+	
+	
+	
+	footer>#BlockOfContactInformation>div>p{
+			
+		text-align:center;	
+			
+	}
+
+	
+	footer>#Location{
+		
+		flex-direction:column-reverse;
+			
+	}
+	
+	
+	footer>#Location>#Adress{
+		
+		width:100%;
+		height:auto;
+		margin-bottom:30px;
+		margin-bottom:calc(20px + 20* ((100vw - 320px) / (1366 - 320)));
+		align-items:center;
+		
+	}
+	
+	footer>#Location>#Adress>p{
+		
+		text-align:start;
+		//width:80%;
+	
+		
+	}
+	
+
+	footer>#Location>#Map{
+		
+		width:100%;
+		height:300px;
+		
+	}
+
+}
+
+
+
+
+
+
